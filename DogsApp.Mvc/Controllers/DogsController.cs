@@ -28,8 +28,20 @@ namespace DogsApp.Mvc.Controllers
             dogService.AddDog(dog);
             return RedirectToAction(nameof(Index),
             new { id = dog.Id });
+        }
 
+        [HttpGet("edit/{id}")]
+        public IActionResult Edit(int id)
+        {
+            var dog = dogService.GetDogById(id);
+            return View(dog);
+        }
 
+        [HttpPost("edit/")]
+        public IActionResult Edit(Dog dog)
+        {
+            dogService.UpdateDog(dog);
+            return RedirectToAction(nameof(Index));
         }
 
         

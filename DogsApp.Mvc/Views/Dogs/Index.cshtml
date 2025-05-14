@@ -16,7 +16,8 @@
     <ol>    
         @foreach (var dog in Model)
         {
-           <li>@dog.Name</li>
+           <li>Name: @dog.Name, Age: @dog.Age</li>
+           <a href="/edit/@dog.Id">Update</a>
         }
     </ol>
 

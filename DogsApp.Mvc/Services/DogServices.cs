@@ -14,5 +14,13 @@ public class DogServices
 
     public Dog[] GetAllDogs() => dogs.ToArray();
 
-    public Dog GetDogById( int id ) => dogs.FirstOrDefault(d => d.Id == id);
+    public Dog? GetDogById( int id ) => dogs.FirstOrDefault(d => d.Id == id);
+
+    public void UpdateDog(Dog updatedDog) {
+        var index = dogs.FindIndex(d => d.Id == updatedDog.Id);
+        if (index > -1)
+        {
+            dogs[index] = updatedDog;
+        }
+    }
 }
