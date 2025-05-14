@@ -1,0 +1,19 @@
+﻿@model DogsApp.Mvc.Models.Dog[]
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create Dog</title>
+    <link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
+</head>
+<body>
+<h2> Add a dog </h2>
+<form action="/create" method="post">	
+	<label>	Dog Name</label>
+	<input type="text" name="name"/>
+	<label> Dog Age</label>
+	<input type="text" name="age" />		
+	<input type="submit" value="create" />
+</form>		
+</body>
+</html>

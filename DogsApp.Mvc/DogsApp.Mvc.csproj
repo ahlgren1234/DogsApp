@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Dogs\NewFile.txt" />
+  </ItemGroup>
+
 </Project>

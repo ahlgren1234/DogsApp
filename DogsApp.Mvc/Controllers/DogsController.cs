@@ -6,7 +6,7 @@ namespace DogsApp.Mvc.Controllers
 {
     public class DogsController : Controller
     {
-        DogServices dogService = new DogServices();
+        static DogServices dogService = new DogServices();
         
         [Route("")]
         public IActionResult Index()
@@ -14,6 +14,13 @@ namespace DogsApp.Mvc.Controllers
             var dogs = dogService.GetAllDogs();
             return View(dogs);
         }
+
+        [HttpGet("create")]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
 
         [HttpPost("create")]
         public IActionResult Create(Dog dog)
@@ -24,5 +31,7 @@ namespace DogsApp.Mvc.Controllers
 
 
         }
+
+        
     }
 }
