@@ -23,4 +23,9 @@ public class DogServices
             dogs[index] = updatedDog;
         }
     }
+
+    public void DeleteDog(int id) {
+        var dog = GetDogById(id);
+       dogs.Remove(dog!);
+    }
 }

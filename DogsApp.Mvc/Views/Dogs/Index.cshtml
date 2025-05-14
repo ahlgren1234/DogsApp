@@ -18,6 +18,11 @@
         {
            <li>Name: @dog.Name, Age: @dog.Age</li>
            <a href="/edit/@dog.Id">Update</a>
+           
+           <form action="delete" method="post">
+           <input type="hidden" name="id" value="@dog.Id" >
+            <button type="submit" value="Delete">Delete</button>
+           </form>
         }
     </ol>
 
